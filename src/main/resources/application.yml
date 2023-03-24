@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 2000
+      maximum-pool-size: 5
+      auto-commit: false
+    url: jdbc:postgresql://localhost:5432/postgres?reWriteBatchedInserts=true
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        generate_statistics: true
+        connection:
+          autocommit: false
+        order_updates: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+springdoc.enable-native-support: true
