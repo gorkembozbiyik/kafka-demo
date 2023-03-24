@@ -27,7 +27,7 @@ public class KafkaConfig {
         configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         configs.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
-        configs.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 600);
+        configs.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 1000);
 
         return new DefaultKafkaConsumerFactory<>(configs);
     }

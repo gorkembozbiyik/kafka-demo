@@ -20,6 +20,4 @@ spring:
           autocommit: false
         order_updates: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-
-springdoc.enable-native-support: true
+    show-sql: false
