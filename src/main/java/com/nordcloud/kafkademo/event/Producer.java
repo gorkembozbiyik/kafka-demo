@@ -41,7 +41,7 @@ public class Producer {
                 .setHeader(KafkaHeaders.TOPIC, topic)
                 .build();
 
-        log.info("Producer -> Message: {}", message);
+        //log.info("Producer -> Message: {}", message);
 
         kafkaTemplate.send(stringMessage);
     }

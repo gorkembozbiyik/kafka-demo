@@ -22,7 +22,8 @@ public class DemoConsumer {
         //log.info("consumerListener started. Message: {}", messageList);
 
         for (List<String> partitionedMessageList : Lists.partition(messageList, 200)) {
-            demoService.saveAll(partitionedMessageList);
+            long rowCount = demoService.saveAll(partitionedMessageList);
+            log.info("KafkaListener -> {} rows inserted.", rowCount);
         }
 
     }
